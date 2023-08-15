@@ -31,8 +31,8 @@ if($_POST){
     <main>
         <div class="container">
             <div class="row vh-100 d-flex align-items-center">
-                <div class="col-4"></div>
-                <div class="col-4">
+                <div class="col-1 col-md-3 col-lg-4"></div>
+                <div class="col-10 col-md-6 col-lg-4">
                     <div class="card p-2">
                     <section class="card-body">
                         <div class="card-header mb-3"><h1>INGRESAR AL PORTAFOLIO</h1></div>
@@ -49,7 +49,7 @@ if($_POST){
                     </section>
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-1 col-md-6 col-lg-4"></div>
             </div>
         </div>
     </main>
