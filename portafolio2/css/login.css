@@ -1,0 +1,9 @@
+h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.card-header{
+    background-color: rgba(0,0,0,0) !important;
+}
