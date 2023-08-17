@@ -1,7 +1,17 @@
 <?php
-    if($_POST){
-        header("Location:inicio.php");
+
+session_start();
+
+if($_POST){
+    if(($_POST["txtUsuario"]=="marcelo") && ($_POST["txtContrasenia"]=="contrasenia")){
+        $_SESSION["logueado"] = "si";
+        $_SESSION["usuario"] = $_POST["txtUsuario"];
+        header("Location: inicio.php");
+    }else{
+        $mensaje = "El usuario y/o contraseña son incorrectos.";
     }
+}
+
 ?>
 
 
@@ -26,6 +36,12 @@
                         LOGIN DEL ADMINISTRADOR
                     </div>
                     <div class="card-body">
+                        <?php if(isset($mensaje)){ ?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo $mensaje; ?>
+                            </div>
+                        <?php } ?>
+
                         <form action="index.php" method="POST">
                             <div class="form-group">
                                 <label for="txtUsuario">Ingresar nombre de Usuario:</label>

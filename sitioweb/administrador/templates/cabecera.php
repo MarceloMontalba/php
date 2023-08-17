@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if(!isset($_SESSION["logueado"])){
+  header("location: ../index.php");
+}else{
+  $usuarioLogueado = $_SESSION["usuario"];
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
