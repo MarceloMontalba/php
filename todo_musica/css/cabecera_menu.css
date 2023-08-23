@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #ccc8c8;
+    overflow-x: hidden;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    background-color: #c45e0a;
+    margin: 0;
+    padding: 1.5rem 4rem;
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600px;
+}
+
+header ul{
+    padding: 10px 0;
+    margin: 0;
+    background-color: #424141;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid #c45e0a;
+    box-shadow: 0 2px 3px #8a8686;
+    padding: 0;
+}
+
+header ul li {
+    display: inline-block;
+    color: white;
+    padding: 0;
+}
+
+header ul li a{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    transition: padding .3s ease;
+}
+
+header ul li a:hover{
+    cursor: pointer;
+    background-color: #db5d02;
+    padding: 10px 30px;
+}
+
+header ul li a i{
+    margin: 0 4px 0 0;
+}
+
+header section{
+    background-color: #e3e1e1;
+    padding: 20px;
+    box-shadow: 0 0.1px 10px #757373;
+}
+
+header section button{
+    padding: 10px 15px;
+    border: none;
+    background-color: #c45e0a;
+    color: white;
+    transition: box-shadow .2s ease;
+}
+
+header section button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #9e9b9b;
+}
+
+header section input[type="text"]{
+    padding: 10px 15px;
+    border: 1px solid #adadad;
+    width: 300px;
+}
+
+header section input[type="text"]:focus{
+    outline: none;
+    box-shadow: 0 0 10px #9e9b9b;
+}
+
+header form{
+    width: 450px;
+    margin: 0 auto;
+}
+
+@media(max-width:700px){
+    header ul li {
+        padding: 0;
+        display: block;
+    }
+    header ul li a {
+        width: 100%;
+    }
+}

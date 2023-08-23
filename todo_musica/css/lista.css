@@ -1,0 +1,39 @@
+.contenedor-lista {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    overflow-y: auto;
+}
+
+.contenedor-lista a {
+    text-decoration: none;
+    color: #000;
+    background-color: #edebeb;
+    padding: 10px 20px;
+    border: 1px solid #918d8d;
+    transition: padding-left .3s ease;
+}
+
+.contenedor-lista .one {
+    padding: 20px 20px;
+}
+
+.contenedor-lista a:hover {
+    cursor: pointer;
+    background-color: #e67105;
+    color: white;
+    padding-left: 35px;
+}
+
+.contenedor-lista a h3 {
+    font-size: 1.2rem;
+    margin: 3px;
+}
+
+.contenedor-lista a p {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 3px;
+}

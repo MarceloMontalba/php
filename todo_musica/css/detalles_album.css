@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+.boton-compra {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0e751e;
+    color: white;
+    transition: box-shadow .2s ease;
+}
+
+.boton-compra:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #0e751e
+}
+
+.boton-compra:active{
+    background-color: #125e1d;
+}
+
+.contenedor-album {
+    margin: 0 auto;
+    max-width: 800px;
+    max-height: 40rem;
+    overflow-y: auto;
+    box-shadow: 0 0 10px #000;
+}
+
+.contenedor-album .encabezado-album {
+    text-align: center;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.contenedor-album .encabezado-album h2 {
+    font-family:'Roboto Condensed';
+    font-size: 1.5rem;
+    background-color: #c45e0a;
+    padding: 1rem 1rem;
+    margin: 0;
+}
+
+.contenedor-album .encabezado-album h3 {
+    font-size: 1rem;
+    background-color: #424141;
+    font-style: italic;
+    padding: 0.4rem 1rem;
+    margin: 0;
+}
+
+.contenedor-album .informacion {
+    padding: 0 30px;
+}
+
+@media(min-width:900px){
+    .contenedor-album .informacion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .contenedor-album .informacion .apartado-compra {
+        min-width: 10rem;
+    }
+}
+
+@media(max-width:900px){
+    .contenedor-album .informacion .apartado-compra {
+        margin-top: 15px;
+    }
+}
+
+.contenedor-album ol {
+    padding: 0;
+}
+
+.contenedor-album li{
+    padding: 1rem;
+}
+
+.contenedor-album li:nth-child(even) {
+    background-color: #f3f5f2;
+}
+
+.contenedor-album .informacion .apartado-cancion{
+    display: inline-block;
+    margin-right: 3rem;
+}
+
+.contenedor-album .informacion .apartado-compra{
+    display: inline-block;
+    text-align: center;
+}
+
+.contenedor-album .informacion .apartado-compra h4 {
+    font-family:'Times New Roman';
+    font-size: 1.2rem;
+    margin: 0.4rem;
+}
+
+.contenedor-album .apartado-cancion>h3 {
+    margin: 0;
+}
