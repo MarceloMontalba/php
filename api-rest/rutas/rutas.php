@@ -23,9 +23,21 @@ if(count(array_filter($arrayRutas)) == 1){
       if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="GET"){
         $cursos = new ControladorCursos;
         $cursos->index();
-      } else if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="POST"){
+      } 
+      // ===================================================================================
+      // CREACIÓN DE NUEVO CURSO A TRAVES DE POST
+      // ===================================================================================
+      else if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="POST"){
+        $datos = array(
+          "titulo"      => isset($_POST["titulo"])      ? $_POST["titulo"]:"",
+          "descripcion" => isset($_POST["descripcion"]) ? $_POST["descripcion"]:"",
+          "instructor"  => isset($_POST["instructor"])  ? $_POST["instructor"]:"",
+          "imagen"      => isset($_POST["imagen"])      ? $_POST["imagen"]:"",
+          "precio"      => isset($_POST["precio"])      ? $_POST["precio"]:""
+        );
+
         $cursos = new ControladorCursos;
-        $cursos->create();
+        $cursos->create($datos);
       }
     }
 
@@ -48,12 +60,12 @@ if(count(array_filter($arrayRutas)) == 1){
     }
   }else{
     // ===================================================================================
-    // Peticiones POST para ingresar crear un curso
+    // Peticiones GET para ingresar crear un curso
     // ===================================================================================
-    if(array_filter($arrayRutas)[2] == "cursos" && is_numeric(array_filter($arrayRutas)[4])){
+    if(array_filter($arrayRutas)[2] == "cursos" && is_numeric(array_filter($arrayRutas)[3])){
       if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="GET"){
         $cursoSeleccionado = new ControladorCursos;
-        $cursoSeleccionado->show(array_filter($arrayRutas)[4]);
+        $cursoSeleccionado->show(array_filter($arrayRutas)[3]);
       } 
     }
 
@@ -70,10 +82,10 @@ if(count(array_filter($arrayRutas)) == 1){
     // ===================================================================================
     // Peticiones DELETE de curso concreto
     // ===================================================================================
-    if(array_filter($arrayRutas)[3] == "cursos" && is_numeric(array_filter($arrayRutas)[4])){
+    if(array_filter($arrayRutas)[3] == "cursos" && is_numeric(array_filter($arrayRutas)[3])){
       if(isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"]=="DELETE"){
         $cursoEliminado = new ControladorCursos;
-        $cursoEliminado->delete(array_filter($arrayRutas)[4]);
+        $cursoEliminado->delete(array_filter($arrayRutas)[3]);
       } 
     }
   }
